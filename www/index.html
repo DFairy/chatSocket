@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="name">
-            <input type="text" id="name" placeholder="请输入昵称..." autocomplete="off">
+    <div class="main" id='main'>
+        <div class="name" id='name'>
+            <input type="text" id="inputName" placeholder="请输入昵称..." autocomplete="off">
             <button id="nameBtn">确  定</button>
         </div>
         <div class="chat">
@@ -22,40 +22,11 @@
             </div>
             <div class="container">
                 <div class="conversation">
-                    <div class="message">
-                        <div class="system">
-                            <div>15:22:44</div>
-                            <br/>
-                            <div>111进入了聊天室</div>
-                        </div>
-                        <div class="right">
-                            <div class="user-content">
-                                <!-- <div>123545</div> -->
-                                <p>我发微信给你</p>
-                            </div>
-                            <img src="./img/user1.jpg" alt="">
-                        </div>
-                        <div class="right">
-                            <div class="user-content">
-                                <!-- <div>123545</div> -->
-                                <p>你没回</p>
-                            </div>
-                            <img src="./img/user1.jpg" alt="">
-                        </div>
-                        <div class="left">
-                            <img src="./img/user1.jpg" alt="">
-                            <div class="user-content">
-                                <div>一天</div>
-                                <p>。。。刚看到</p>
-                            </div>
-                        </div>
+                    <div class="message" id='message'>
                     </div>
                     <div class="edit">
                         <div class="menu">
-                            <div class="color">
-                                <input type="color" id="color" value="#000000">
-                                <i title="自定义字体颜色" id="font" class="fa fa-font"></i>
-                            </div>
+
                             <i title="选择表情" class="fa fa-smile-o" id="smile"></i>
                             <i title="单击页面震动" id="shake" class="fa fa-bolt"></i>
                             <div class="file">
@@ -63,41 +34,26 @@
                                 <i class="fa fa-picture-o" id="img"></i>
                             </div>
                             <div class="selectBox">
-                                <div class="smile" id="smileDiv">
+                                <div class="smile" id='emojiSmile'>
                                     <p>经典表情</p>
-                                    <ul class="emoji"></ul>
+                                    <ul class="emoji" id='emoji'></ul>
                                 </div>
                             </div>
                         </div>
                         <textarea autofocus id="txt" rows="2"></textarea>
-                        <button class="send">发送</button>
+                        <button class="send" id='send'>发送</button>
                     </div>
                 </div>
-                <div class="contracts">
+                <div class="contracts" id='contracts'>
                     <h1>在线人员(
-                        <sapn id='num'>1</sapn>)</h1>
-                    <ul class="users">
-                        <li>
-                            <img src="./img/user1.jpg" alt="">
-                            <div class="nickname">小明小明</div>
-                        </li>
-                        <li>
-                            <img src="./img/user1.jpg" alt="">
-                            <div class="nickname">小明小明</div>
-                        </li>
-                        <!-- <li>
-                            <img src="./img/user1.jpg" alt="">
-                            <div class="nickname">小明小明</div>
-                        </li>
-                        <li>
-                            <img src="./img/user1.jpg" alt="">
-                            <div class="nickname">小明小明</div>
-                        </li> -->
+                        <sapn id='num'></sapn>)</h1>
+                    <ul class="users" id='users'>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
     <script src="./index.js"></script>
 </body>
 

@@ -44,7 +44,6 @@ body {
     background-color: rgba(238, 238, 238, 0.8);
     text-align: center;
     padding-top: 35vh;
-    display: none;
 }
 
 .name input {
@@ -116,6 +115,7 @@ body {
     color: #888;
     text-align: center;
     margin: 5px;
+    margin-bottom: 10px
 }
 
 .system div {
@@ -136,8 +136,8 @@ body {
     justify-content: flex-end;
 }
 
-.left img,
-.right img {
+.left .avatar,
+.right .avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -216,6 +216,19 @@ body {
     border-bottom-color: currentColor;
     border-radius: 0 0 32px 0;
     color: #2683F5;
+}
+
+.sendImg {
+    max-width: 300px;
+    max-height: 188px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+.emojiImg {
+    width: 30px;
+    height: 30px;
 }
 
 .edit {
@@ -304,6 +317,17 @@ body {
     padding-left: 2px;
     display: inline-block;
     margin: 0;
+}
+
+.emoji li:hover {
+    padding-top: 1px;
+    background-color: #f3f3f4;
+    cursor: pointer;
+}
+
+.emoji li img {
+    width: 30px;
+    height: 30px;
 }
 
 #txt {
@@ -397,4 +421,39 @@ body {
     -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 0;
     background: rgba(0, 0, 0, 0.1);
+}
+
+.shaking {
+    -webkit-animation: run 0.5s linear;
+    animation: run 0.55s linear;
+    /* animation: rotate 3s linear ; */
+}
+
+@keyframes run {
+    0% {
+        transform: translateX(-8px)
+    }
+    25% {
+        transform: translateX(8px)
+    }
+    50% {
+        transform: translateX(-8px)
+    }
+    75% {
+        transform: translateX(8px)
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
 }
